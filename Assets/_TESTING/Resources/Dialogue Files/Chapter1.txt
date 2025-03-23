@@ -1,0 +1,47 @@
+playsfx(thunder_strong_01 -p 0.85 -v 0.3 -loop true)
+PlaySong(Calm)
+
+Narrator "The sky rumbled as a storm approached.{c}Not soon after the storm worsened and the sky began to let down a deluge as lightning"
+
+ShowGalleryImage(flower)
+"Dashing through the rain and mud, two figures began to see lights emerge through the thick of the trees surrounding them."
+Billy as ??? "Look! I see lights ahead!"
+Clementine as ??? "It's the village, hurry! {wa 1} We're almost there!"
+Narrator "Excitement filled their breath and fueled their steps.{c}Within moments, they broke through the forest boundaries and came in"
+HideGalleryImage()
+
+SetLayerMedia(background villagenight)
+CreateCharacter(Billy), CreateCharacter(Clementine), Billy.SetPosition(-0.3), Clementine.SetPosition(1.3), Billy.Move(0.1), Clementine.Move(0.9)
+Billy.Show(), Clementine.Show()
+Billy [happy] "Finally here!"
+Billy.Move(0.2 -spd 0.3)
+Billy [happy] "Hey, Clementine - you think this place has an inn?"
+Clementine "I don't care if we have to sleep in a stable we just need to get out of this storm."
+Clementine.Move(0.6 -spd 1.2)
+"We're going to get sick out here"
+Billy.Move(0.1 -spd 0.5)
+Billy [happy] "Yeah, maybe. But since we're stuck out here, I prefer to think of it like a nice, cold shower!"
+Clementine "Okay first of all...{wa 0.5} Cold showers are not <i>nice</i> I don't care what anyone says. {c}And secondly, I don't shower with my clothes on.{c}Let's just find"
+Billy.Move(0.3 -spd 0.7)
+Billy [angry] "Hey I think I see something over there!"
+Clementine "It's a lodge! Maybe they have a spare room?"
+Billy "Possibly. Or we just go a little further. My ship is just beyond this village, and I've got plenty of room in there."
+choice "Where Should You Go?"
+{
+    -To The Inn
+        Clementine "Billy, we're already here! {a} Let's just get in the lodge and out of this storm!" 
+        Billy "Okay!"
+        Load("Chapter1_Inn" -enqueue True)
+    -To The Ship
+        Clementine "Fine, we'll go to the ship. That will make it easier to leave in the morning..." 
+        Billy "You betcha!"
+        Load("Chapter1_Ship" -enqueue True)
+}
+
+
+HideDB()
+Billy.Move(1.5-spd 2), Clementine.Move(1.5 -spd 2), Billy.Hide(), Clementine.Hide()
+wait(0.75)
+ClearLayerMedia(background), wait(1)
+StopSong()
+wait(1)

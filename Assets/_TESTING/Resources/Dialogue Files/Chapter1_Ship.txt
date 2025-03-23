@@ -1,0 +1,7 @@
+SetLayerMedia(background village), PlaySong (Calm2)
+Billy.Show(), Clementine.Show(), Billy.SetPosition(-0.5), Clementine.SetPosition(-0.5) 
+Billy.Move(0.3 -spd 1.5), Clementine.Move(0 -spd 1.5)
+wait(1)
+ShowDB(-i true)
+Clementine "Finaly, out of that storm!"
+Billy "Ah, home sweet home!"

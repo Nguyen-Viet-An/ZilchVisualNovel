@@ -1,0 +1,15 @@
+
+SetLayerMedia(background artroom), PlaySong(Calm2)
+Billy.Show(), Clementine.Show(), Billy.SetPosition(-0.5), Clementine.SetPosition(-0.5) 
+Billy.Move(0.3 -spd 1.5), Clementine.Move(0 -spd 1.5)
+wait(1)
+ShowDB (-i true)
+Clementine "Finally, out of that storm! {c} Now let's just hope they have a room here." 
+Billy "Let's find out. {c}Hello?{a} Is anyone here?"
+narrator "Stepping out from a room in the far back of the lodge, a tall, gruff man took his place behind the counter"
+Innkeeper "That's a nasty storm out there. {c}But I don't need to tell you that, it seems."
+Narrator "The man let out a hearty chuckle and offered the two girls a drink."
+Innkeeper "If you came looking for a room, I'm afraid the most I can offer you is a hot drink and seat by the chair"
+Clementine "You mean, you have no vacancies?"
+Innkeeper "I'm afraid not.{a} The last room was taken this morning. I'm afraid I don't have anything else available"
+Billy.SetSprite("sad")

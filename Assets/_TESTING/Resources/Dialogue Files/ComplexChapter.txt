@@ -1,0 +1,23 @@
+
+PlaySong(Calm2)
+SetLayerMedia(background "bg shrine_hallway")
+CreateCharacter(Billy), Billy.SetPosition(-0.3) 
+Billy.Show()
+Billy [happy 2] "Hello, everyone! {c}I hope the tutorial series is going well for you." 
+"The save system should be able to save all conversations and their progress trackers to file."
+
+input "What is your name?"
+SetPlayerName(<input>)
+if (<mainChar> == "Spiderman")
+{
+    narrator "You are the amazing <mainChar>!"
+    narrator "And that's an impressive thing."
+    narrator "I got bit by a spider once, but I didn't get any superpowers. {c}I just got a $200 medical bill."
+}
+else
+{
+    narrator "It is nice to meet you, <mainChar>."
+    narrator "So...{a} Do you come here often?"
+    narrator "So you tell me your name is, <mainChar>?"
+}
+

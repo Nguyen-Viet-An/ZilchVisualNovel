@@ -1,0 +1,11 @@
+Walter "Finances are a big problem for a young band."
+Walter "Unfortunately, band members don't care about them well enough."
+Walter "It's important that you, as a manager, manage the budget well. {c} Or we will be in some... {wa 1} big troubles."
+
+print_1p("This is a command running straight from our dialogue file!")
+John "Move Left then move right" print_1p("Start moving!"), [wait]moveCharDemo(left), [wait]moveCharDemo(right), print_1p("Done moving")
+John "Let's play some music!" playSong("Funky Beets" -v 0.75 -p 1), setMood(chill)
+Elen "you have odd taste in music." playVoice("e_d1_v2_ -v 1.5), setBackground(Room1 -t "Diagonal Lines")
+setAccomplishment("A legendary Boombox" true), setCLI(Elen 0:Angle1 1:Intrigued -s 2.3 -l true)
+showScene(false), StopMusic(all -s 1.5)
+
